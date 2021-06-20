@@ -1,0 +1,6 @@
+{
+  "eslint.options": {
+    "config.file": "/home/traweezy/projects/portfolio-web/.eslintrc"
+  },
+  "prettier.configPath": "/home/traweezy/projects/portfolio-web/.prettierrc"
+}
