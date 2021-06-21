@@ -1,9 +1,13 @@
 import React from 'react';
 
+import Navigation from './components/navigaiton';
+
 const App = (): JSX.Element => (
-  <div className="p-6 items-center justify-center">
-    <h1 className="text-blue-400 font-medium">Hello World!</h1>
-    <p className="tracking-widest">This is my first React App.</p>
+  <div className="h-full grid grid-cols-12 grid-flow-col font-titillium">
+    <div className="border-r-2 border-black col-span-3">
+      <Navigation />
+    </div>
+    <div className=" col-span-9" />
   </div>
 );
 
