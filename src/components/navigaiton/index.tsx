@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import NavItem from './components/nav-item';
+import SocialIcon from './components/social-icon';
 
 const links = ['about', 'projects', 'contact'];
 
@@ -14,13 +15,15 @@ const Navigation = (): JSX.Element => (
     </div>
     <div>
       {links.map(link => (
-        <>
-          <NavItem key={link} name={link} />
+        <Fragment key={link}>
+          <NavItem name={link} />
           <br />
-        </>
+        </Fragment>
       ))}
     </div>
-    <div />
+    <div>
+      <SocialIcon name="marklar" />
+    </div>
   </div>
 );
 

@@ -14,7 +14,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      ringOpacity: ['hover', 'active'],
+    },
   },
   plugins: [],
 };
