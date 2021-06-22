@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navigation from './components/navigation';
-import About from './pages/about';
+import About from './pages/about/index';
 import Projects from './pages/projects';
 import Contact from './pages/contact';
 
@@ -34,9 +34,9 @@ const App = (): JSX.Element => (
       </div>
       <div className="w-full">
         <Switch>
-          {routes.map(({ name, path, exact, component: RouteComponent }) => (
+          {routes.map(({ name, path, exact, component: Component }) => (
             <Route key={name} path={path} exact={exact}>
-              <RouteComponent />
+              <Component />
             </Route>
           ))}
         </Switch>

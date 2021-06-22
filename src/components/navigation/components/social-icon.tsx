@@ -7,8 +7,7 @@ interface SocialIconProps {
 
 const SocialIcon = ({ name }: SocialIconProps): JSX.Element => {
   const handleClick = () => {
-    // window.open('https://www.google.com', '_blank');
-    console.log(name);
+    window.open('https://www.google.com', '_blank');
   };
   return (
     <button
@@ -18,6 +17,7 @@ const SocialIcon = ({ name }: SocialIconProps): JSX.Element => {
       //   target="_blank"
       //   rel="noreferrer"
     >
+      {name}
       <Camera onClick={handleClick} />
     </button>
   );
