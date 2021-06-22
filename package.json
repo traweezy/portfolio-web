@@ -15,7 +15,6 @@
     "react-dom": "^17.0.2",
     "react-feather": "^2.0.9",
     "react-router-dom": "^5.2.0",
-    "react-router-transition": "^2.1.0",
     "react-scripts": "4.0.3",
     "typescript": "^4.3.4",
     "web-vitals": "^1.1.2"
@@ -48,7 +47,6 @@
   "homepage": "https://tylerschumacher.dev/",
   "devDependencies": {
     "@types/react-router-dom": "^5.1.7",
-    "@types/react-router-transition": "^2.1.0",
     "@typescript-eslint/eslint-plugin": "^4.27.0",
     "@typescript-eslint/parser": "^4.27.0",
     "autoprefixer": "^9.8.6",
