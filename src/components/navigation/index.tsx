@@ -1,10 +1,13 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import NavItem from './components/nav-item';
 import SocialIcon from './components/social-icon';
 
-const links = ['about', 'projects', 'contact'];
+interface NavigationProps {
+  routes: RouteConfig[];
+}
 
-const Navigation = (): JSX.Element => (
+const Navigation = ({ routes }: NavigationProps): JSX.Element => (
   <div className="h-full p-4">
     <div className="mb-12">
       <div className="inline-block text-4xl font-extrabold text-black uppercase">
@@ -14,11 +17,11 @@ const Navigation = (): JSX.Element => (
       </div>
     </div>
     <div>
-      {links.map(link => (
-        <Fragment key={link}>
-          <NavItem name={link} />
+      {routes.map(({ name, path }) => (
+        <Link to={path}>
+          <NavItem name={name} />
           <br />
-        </Fragment>
+        </Link>
       ))}
     </div>
     <div>

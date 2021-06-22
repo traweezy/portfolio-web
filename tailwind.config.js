@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     colors: {
       black: '#333',
-      tangerine: '#FF9B21',
+      tangerine: '#ffb75f',
     },
     fontFamily: {
       titillium: ['Titillium Web', 'sans-serif'],

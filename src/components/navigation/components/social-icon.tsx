@@ -13,7 +13,7 @@ const SocialIcon = ({ name }: SocialIconProps): JSX.Element => {
   return (
     <button
       type="button"
-      className="p-2 rounded-full ring-4 ring-tangerine ring-opacity-0 hover:ring-opacity-50 transition duration-500 ease-in-out"
+      className="p-2 rounded-full ring-4 ring-tangerine ring-opacity-0 hover:ring-opacity-100 transition duration-500 ease-in-out"
       //   href="https://twitter.com"
       //   target="_blank"
       //   rel="noreferrer"
