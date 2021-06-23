@@ -1,10 +1,14 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, cleanup } from '@testing-library/react';
 import NavItem from './nav-item';
 
 describe('Given <NavItem />', () => {
   let name: string;
   let isActive: boolean;
+
+  afterEach(() => {
+    cleanup();
+  });
 
   describe('When given a valid name and is not active', () => {
     beforeEach(() => {

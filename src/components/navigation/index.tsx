@@ -21,7 +21,7 @@ const Navigation = ({ routes }: NavigationProps): JSX.Element => {
       </div>
       <div>
         {routes.map(({ name, path }) => (
-          <Link to={path}>
+          <Link data-testid={`${name}-link`} key={name} to={path}>
             <NavItem name={name} isActive={location.pathname === path} />
             <br />
           </Link>
