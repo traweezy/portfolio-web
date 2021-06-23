@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import ParticleBackground from 'react-particle-backgrounds';
 import Navigation from './components/navigation';
 import About from './pages/about/index';
