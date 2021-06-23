@@ -23,8 +23,10 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test",
+    "test": "npm run test:lint && npm run test:unit",
+    "test:unit": "craco test --runInBand --no-cache --watchAll=false",
     "eject": "react-scripts eject",
+    "test:lint": "eslint './src/**/*.{ts,tsx}'",
     "security-audit": "npm audit --only=prod"
   },
   "eslintConfig": {
