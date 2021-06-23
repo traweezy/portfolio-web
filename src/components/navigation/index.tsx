@@ -9,7 +9,7 @@ interface NavigationProps {
 
 const Navigation = ({ routes }: NavigationProps): JSX.Element => {
   const location = useLocation();
-  console.log(location);
+
   return (
     <div className="h-full p-4">
       <div className="mb-12">
