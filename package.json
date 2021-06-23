@@ -60,5 +60,13 @@
     "prettier": "^2.3.1",
     "tailwind-pseudo-elements": "^0.4.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!@shotgunjed)/"
+    ]
   }
 }
