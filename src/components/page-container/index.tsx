@@ -25,7 +25,7 @@ interface PageContainerProps {
   children: ReactChild | ReactChildren;
 }
 
-const PageContainer = ({ children }: PageContainerProps) => (
+const PageContainer = ({ children }: PageContainerProps): JSX.Element => (
   <>
     <Particles className="absolute z-0" settings={settings} />
     <div className="relative z-10 h-full">{children}</div>
