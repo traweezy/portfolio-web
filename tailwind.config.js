@@ -18,5 +18,5 @@ module.exports = {
       ringOpacity: ['hover', 'active'],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 };
