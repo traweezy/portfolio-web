@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Contact = (): JSX.Element => {
   return (
     <div className="flex flex-col justify-center w-full h-full align-middle">

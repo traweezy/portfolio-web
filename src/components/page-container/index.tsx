@@ -1,4 +1,4 @@
-import React, { ReactChild, ReactChildren } from 'react';
+import { ReactChild, ReactChildren } from 'react';
 import Particles from 'react-particle-backgrounds';
 
 const settings: ParticleBackgroundConfig = {

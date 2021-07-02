@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import NavItem from './components/nav-item';
 import SocialIcon from './components/social-icon';

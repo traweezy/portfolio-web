@@ -1,7 +1,9 @@
 {
   "extends": [
+    "eslint:recommended",
     "airbnb-typescript",
     "airbnb/hooks",
+    "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:tailwind/recommended",
     "plugin:jest/recommended",
@@ -32,6 +34,7 @@
     "no-underscore-dangle": "off",
     "import/no-named-as-default": "off",
     "no-restricted-syntax": "off",
+    "react/react-in-jsx-scope": "off",
     "@typescript-eslint/naming-convention": [
       "error",
       { "selector": "default", "format": ["camelCase"] },

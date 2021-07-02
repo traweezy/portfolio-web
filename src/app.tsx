@@ -1,4 +1,3 @@
-import React from 'react';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import Navigation from './components/navigation';
 import PageContainer from './components/page-container';
