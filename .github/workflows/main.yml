@@ -59,6 +59,8 @@ jobs:
         run: |
           npm ci
           npm run build
+        env:
+          SKIP_PREFLIGHT_CHECK: ${{ secrets.SKIP_PREFLIGHT_CHECK }}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
