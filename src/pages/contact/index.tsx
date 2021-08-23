@@ -26,7 +26,7 @@ const Contact = (): JSX.Element => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit: SubmitHandler<ContactFormInput> = data => console.log(data);
+  const onSubmit: SubmitHandler<ContactFormInput> = data => data;
 
   return (
     <div className="flex flex-col justify-center w-full h-full p-6 align-middle">
@@ -89,7 +89,7 @@ const Contact = (): JSX.Element => {
         <div className="flex flex-wrap mb-2 -mx-3">
           <div className="w-full px-3 mb-6">
             <label
-              className="block mb-2 text-base font-bold tracking-wid capitalize e"
+              className="block mb-2 text-base font-bold capitalize tracking-wid e"
               htmlFor="form-message"
             >
               message
@@ -105,7 +105,7 @@ const Contact = (): JSX.Element => {
         </div>
         <button
           type="submit"
-          className="focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none float-right w-full px-6 py-3 text-base font-bold text-black rounded-lg bg-tangerine-500 hover:bg-tangerine-600 duration-200"
+          className="float-right w-full px-6 py-3 text-base font-bold text-black rounded-lg focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none bg-tangerine-500 hover:bg-tangerine-600 duration-200"
         >
           Send
         </button>
