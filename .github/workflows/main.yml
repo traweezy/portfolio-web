@@ -22,6 +22,8 @@ jobs:
       - run: |
           npm ci
           npm run build
+        env:
+          SKIP_PREFLIGHT_CHECK: ${{ secrets.SKIP_PREFLIGHT_CHECK }}
 
   test:
     runs-on: ubuntu-latest
