@@ -1,33 +1,33 @@
 const Contact = (): JSX.Element => {
   return (
-    <div className="flex flex-col justify-center w-full h-full align-middle">
-      <div className="my-10 text-3xl font-extrabold text-center text-black">
+    <div className="flex flex-col justify-center w-full h-full p-6 align-middle">
+      <div className="my-10 text-3xl font-extrabold text-center text-">
         Contact Me
       </div>
       <form className="w-full max-w-4xl mx-auto">
         <div className="flex flex-wrap mb-6 -mx-3">
           <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0">
             <label
-              className="block mb-2 text-xs font-bold tracking-wide uppercase"
-              htmlFor="grid-first-name"
+              className="block mb-2 text-base font-bold tracking-wide"
+              htmlFor="form-first-name"
             >
-              name
+              Name
               <input
-                className="block w-full px-4 py-3 mt-2 mb-3 leading-tight border rounded appearance-none focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                id="grid-first-name"
+                className="block w-full px-4 py-3 mt-2 mb-3 leading-tight border border-gray-200 rounded appearance-none transition duration-200 ease-in-out focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none form-input"
+                id="form-first-name"
                 type="text"
               />
             </label>
           </div>
           <div className="w-full px-3 md:w-1/2">
             <label
-              className="block mb-2 text-xs font-bold tracking-wide uppercase"
-              htmlFor="grid-last-name"
+              className="block mb-2 text-base font-bold tracking-wide"
+              htmlFor="form-last-name"
             >
-              email
+              Email
               <input
-                className="block w-full px-4 py-3 mt-2 leading-tight border border-gray-200 rounded appearance-none"
-                id="grid-last-name"
+                className="block w-full px-4 py-3 mt-2 leading-tight border border-gray-200 rounded appearance-none transition duration-200 ease-in-out focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none form-input"
+                id="form-last-name"
                 type="email"
               />
             </label>
@@ -36,13 +36,13 @@ const Contact = (): JSX.Element => {
         <div className="flex flex-wrap mb-6 -mx-3">
           <div className="w-full px-3">
             <label
-              className="block mb-2 text-xs font-bold tracking-wide uppercase"
-              htmlFor="grid-password"
+              className="block mb-2 text-base font-bold tracking-wide"
+              htmlFor="form-password"
             >
-              subject
+              Subject
               <input
-                className="block w-full px-4 py-3 mt-2 mb-3 leading-tight border border-gray-200 rounded appearance-none"
-                id="grid-password"
+                className="block w-full px-4 py-3 mt-2 mb-3 leading-tight border border-gray-200 rounded appearance-none transition duration-200 ease-in-out focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none form-input"
+                id="form-password"
                 type="text"
               />
             </label>
@@ -51,17 +51,24 @@ const Contact = (): JSX.Element => {
         <div className="flex flex-wrap mb-2 -mx-3">
           <div className="w-full px-3 mb-6">
             <label
-              className="block mb-2 text-xs font-bold tracking-wide uppercase"
-              htmlFor="grid-city"
+              className="block mb-2 text-base font-bold tracking-wide"
+              htmlFor="form-message"
             >
-              message
+              Message
               <textarea
-                className="block w-full px-4 py-3 mt-1 mt-2 leading-tight border border-gray-200 rounded appearance-none resize form-textarea"
+                id="form-message"
+                className="block w-full px-4 py-3 mt-2 leading-tight border border-gray-200 rounded appearance-none resize transition duration-200 ease-in-out focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none form-textarea"
                 rows={10}
               />
             </label>
           </div>
         </div>
+        <button
+          type="submit"
+          className="float-right w-full px-6 py-3 text-base font-bold text-black rounded-lg bg-tangerine-500 hover:bg-tangerine-600 duration-200"
+        >
+          Send
+        </button>
       </form>
     </div>
   );
