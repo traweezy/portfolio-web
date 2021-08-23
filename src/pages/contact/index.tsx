@@ -27,7 +27,6 @@ const Contact = (): JSX.Element => {
 
   const { mutate, isLoading } = useMutation(api.sendEmail, {
     onSuccess: () => {
-      console.log('success');
       reset();
     },
     onError: (error: Error) => {
