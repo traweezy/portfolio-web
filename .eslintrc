@@ -35,6 +35,7 @@
     "import/no-named-as-default": "off",
     "no-restricted-syntax": "off",
     "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
     "@typescript-eslint/naming-convention": [
       "error",
       { "selector": "default", "format": ["camelCase"] },
