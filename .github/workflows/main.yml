@@ -20,11 +20,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - env:
-          SKIP_PREFLIGHT_CHECK: ${{ secrets.SKIP_PREFLIGHT_CHECK }}
-        run: |
+      - run: |
           npm ci
           npm run build
+        env:
+          SKIP_PREFLIGHT_CHECK: ${{ secrets.SKIP_PREFLIGHT_CHECK }}
 
   test:
     runs-on: ubuntu-latest
@@ -55,13 +55,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.1
-
       - name: Install and Build
-      - env:
-          SKIP_PREFLIGHT_CHECK: ${{ secrets.SKIP_PREFLIGHT_CHECK }}
-        run: |
+      - run: |
           npm ci
           npm run build
+        env:
+          SKIP_PREFLIGHT_CHECK: ${{ secrets.SKIP_PREFLIGHT_CHECK }}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
