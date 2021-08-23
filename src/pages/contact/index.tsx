@@ -20,17 +20,29 @@ const Contact = (): JSX.Element => {
     formState: { errors },
     handleSubmit,
     reset,
+    setError,
   } = useForm<Email>({
     resolver: yupResolver(schema),
   });
 
-  const sendEmail = useMutation(api.sendEmail, {
+  const { mutate, isLoading } = useMutation(api.sendEmail, {
     onSuccess: () => {
       console.log('success');
       reset();
     },
     onError: (error: Error) => {
-      console.log('error', error.toString());
+      if (error.toString().includes('400')) {
+        setError(
+          'from',
+          {
+            type: 'manual',
+            message: 'This email address failed validation',
+          },
+          {
+            shouldFocus: true,
+          },
+        );
+      }
     },
   });
 
@@ -45,7 +57,7 @@ const Contact = (): JSX.Element => {
 
   const onSubmit: SubmitHandler<Omit<Email, 'to'>> = data => {
     const formattedData = formatSubmitData(data);
-    return sendEmail.mutate(formattedData);
+    return mutate(formattedData);
   };
 
   return (
@@ -124,10 +136,17 @@ const Contact = (): JSX.Element => {
           </div>
         </div>
         <button
+          disabled={isLoading}
           type="submit"
           className="float-right w-full px-6 py-3 text-base font-bold text-black rounded-lg focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none bg-tangerine-500 hover:bg-tangerine-600 duration-200"
         >
-          Send
+          {isLoading ? (
+            <div className="flex items-center justify-center pr-4">
+              <div className="w-4 h-4 border-b-2 border-gray-900 rounded-full animate-spin" />
+            </div>
+          ) : (
+            'Send'
+          )}
         </button>
       </form>
     </div>
