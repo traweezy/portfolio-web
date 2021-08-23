@@ -1,20 +1,17 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useMutation } from 'react-query';
 import * as yup from 'yup';
 import FieldErrorMessage from './components/field-error-message';
+import Api from '../../services/api';
 
-interface ContactFormInput {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
+const api = new Api();
 
 const schema = yup.object().shape({
   name: yup.string().required(),
-  email: yup.string().email().required(),
+  from: yup.string().email().required(),
   subject: yup.string().required(),
-  message: yup.string().required(),
+  text: yup.string().required(),
 });
 
 const Contact = (): JSX.Element => {
@@ -22,11 +19,34 @@ const Contact = (): JSX.Element => {
     register,
     formState: { errors },
     handleSubmit,
-  } = useForm<ContactFormInput>({
+    reset,
+  } = useForm<Email>({
     resolver: yupResolver(schema),
   });
 
-  const onSubmit: SubmitHandler<ContactFormInput> = data => data;
+  const sendEmail = useMutation(api.sendEmail, {
+    onSuccess: () => {
+      console.log('success');
+      reset();
+    },
+    onError: (error: Error) => {
+      console.log('error', error.toString());
+    },
+  });
+
+  const formatSubmitData = (email: Omit<Email, 'to'>): Omit<Email, 'name'> => {
+    const { name, ...rest } = email;
+    return {
+      ...rest,
+      subject: `${email.name} - ${email.subject}`,
+      to: 'tyler.schumacher@protonmail.com',
+    };
+  };
+
+  const onSubmit: SubmitHandler<Omit<Email, 'to'>> = data => {
+    const formattedData = formatSubmitData(data);
+    return sendEmail.mutate(formattedData);
+  };
 
   return (
     <div className="flex flex-col justify-center w-full h-full p-6 align-middle">
@@ -58,15 +78,15 @@ const Contact = (): JSX.Element => {
               className="block mb-2 text-base font-bold tracking-wide capitalize"
               htmlFor="form-last-name"
             >
-              email
+              from
               <input
-                {...register('email')}
+                {...register('from')}
                 className="block w-full px-4 py-3 mt-2 leading-tight border border-gray-200 rounded appearance-none transition duration-200 ease-in-out focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none form-input"
                 id="form-last-name"
                 type="email"
               />
             </label>
-            <FieldErrorMessage message={errors.email?.message} />
+            <FieldErrorMessage message={errors.from?.message} />
           </div>
         </div>
         <div className="flex flex-wrap mb-6 -mx-3">
@@ -94,13 +114,13 @@ const Contact = (): JSX.Element => {
             >
               message
               <textarea
-                {...register('message')}
+                {...register('text')}
                 id="form-message"
                 className="block w-full px-4 py-3 mt-2 leading-tight border border-gray-200 rounded appearance-none resize transition duration-200 ease-in-out focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none form-textarea"
                 rows={10}
               />
             </label>
-            <FieldErrorMessage message={errors.message?.message} />
+            <FieldErrorMessage message={errors.text?.message} />
           </div>
         </div>
         <button
