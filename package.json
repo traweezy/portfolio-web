@@ -9,7 +9,6 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "@types/jest": "^26.0.23",
     "@types/node": "^12.20.15",
     "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.8",
@@ -55,6 +54,7 @@
   },
   "homepage": "https://tylerschumacher.dev/",
   "devDependencies": {
+    "@types/jest": "^27.0.1",
     "@types/react-query": "^1.2.9",
     "@types/react-router-dom": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.27.0",
@@ -69,14 +69,7 @@
     "postcss": "^7.0.36",
     "prettier": "^2.3.1",
     "tailwind-pseudo-elements": "^0.4.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.7"
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.[t|j]sx?$": "babel-jest"
-    },
-    "transformIgnorePatterns": [
-      "node_modules/(?!@shotgunjed)/"
-    ]
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.7",
+    "ts-jest": "^27.0.5"
   }
 }
