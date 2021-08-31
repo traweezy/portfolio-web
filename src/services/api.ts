@@ -7,7 +7,7 @@ class Api extends HttpClient {
   }
 
   public sendEmail = (
-    email: Omit<Email, 'name'>,
+    email: Omit<Email, 'name' | 'email'>,
   ): Promise<AxiosResponse<Email>> =>
     this.instance.post<Email>(`/send-email`, email);
 }

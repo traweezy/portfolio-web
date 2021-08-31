@@ -1,10 +1,14 @@
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { ToastContainer } from 'react-toastify';
+
 import Navigation from './components/navigation';
 import PageContainer from './components/page-container';
 import About from './pages/about/index';
 import Projects from './pages/projects';
 import Contact from './pages/contact';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 const routes: RouteConfig[] = [
   {
@@ -49,6 +53,7 @@ const App = (): JSX.Element => (
         </div>
       </div>
     </Router>
+    <ToastContainer />
   </QueryClientProvider>
 );
 

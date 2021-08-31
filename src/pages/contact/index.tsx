@@ -2,6 +2,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useMutation } from 'react-query';
 import * as yup from 'yup';
+import { toast } from 'react-toastify';
 import FieldErrorMessage from './components/field-error-message';
 import Api from '../../services/api';
 
@@ -9,7 +10,7 @@ const api = new Api();
 
 const schema = yup.object().shape({
   name: yup.string().required(),
-  from: yup.string().email().required(),
+  email: yup.string().email().required(),
   subject: yup.string().required(),
   text: yup.string().required(),
 });
@@ -27,12 +28,16 @@ const Contact = (): JSX.Element => {
 
   const { mutate, isLoading } = useMutation(api.sendEmail, {
     onSuccess: () => {
+      toast.success('Email sent successfully!', {
+        position: 'bottom-right',
+      });
       reset();
     },
     onError: (error: Error) => {
+      toast.error(error.message, { position: 'bottom-right' });
       if (error.toString().includes('400')) {
         setError(
-          'from',
+          'email',
           {
             type: 'manual',
             message: 'This email address failed validation',
@@ -45,11 +50,14 @@ const Contact = (): JSX.Element => {
     },
   });
 
-  const formatSubmitData = (email: Omit<Email, 'to'>): Omit<Email, 'name'> => {
-    const { name, ...rest } = email;
+  const formatSubmitData = (
+    emailData: Omit<Email, 'to'>,
+  ): Omit<Email, 'name' | 'email'> => {
+    const { name, email, ...rest } = emailData;
     return {
       ...rest,
-      subject: `${email.name} - ${email.subject}`,
+      from: email,
+      subject: `${emailData.name} - ${emailData.subject}`,
       to: 'tyler.schumacher@protonmail.com',
     };
   };
@@ -61,7 +69,10 @@ const Contact = (): JSX.Element => {
 
   return (
     <div className="flex flex-col justify-center w-full h-full p-6 align-middle">
-      <div className="my-10 text-3xl font-extrabold text-center text-">
+      <div
+        data-testid="form-header"
+        className="my-10 text-3xl font-extrabold text-center text-"
+      >
         Contact Me
       </div>
       <form
@@ -72,32 +83,38 @@ const Contact = (): JSX.Element => {
           <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0">
             <label
               className="block mb-2 text-base font-bold tracking-wide capitalize "
-              htmlFor="form-first-name"
+              htmlFor="form-name"
             >
               name
               <input
                 {...register('name')}
+                data-testid="form-input-name"
                 className="block w-full px-4 py-3 mt-2 mb-3 leading-tight border border-gray-200 rounded appearance-none transition duration-200 ease-in-out focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none form-input"
-                id="form-first-name"
+                id="form-name"
                 type="text"
               />
             </label>
-            <FieldErrorMessage message={errors.name?.message} />
+            {errors.name?.message ? (
+              <FieldErrorMessage message={errors.name.message} />
+            ) : null}
           </div>
           <div className="w-full px-3 md:w-1/2">
             <label
               className="block mb-2 text-base font-bold tracking-wide capitalize"
-              htmlFor="form-last-name"
+              htmlFor="form-email"
             >
-              from
+              email
               <input
-                {...register('from')}
+                {...register('email')}
+                data-testid="form-input-email"
                 className="block w-full px-4 py-3 mt-2 leading-tight border border-gray-200 rounded appearance-none transition duration-200 ease-in-out focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none form-input"
-                id="form-last-name"
+                id="form-email"
                 type="email"
               />
             </label>
-            <FieldErrorMessage message={errors.from?.message} />
+            {errors.email?.message ? (
+              <FieldErrorMessage message={errors.email.message} />
+            ) : null}
           </div>
         </div>
         <div className="flex flex-wrap mb-6 -mx-3">
@@ -109,12 +126,15 @@ const Contact = (): JSX.Element => {
               subject
               <input
                 {...register('subject')}
+                data-testid="form-input-subject"
                 className="block w-full px-4 py-3 mt-2 mb-3 leading-tight border border-gray-200 rounded appearance-none transition duration-200 ease-in-out focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none form-input"
                 id="form-subject"
                 type="text"
               />
             </label>
-            <FieldErrorMessage message={errors.subject?.message} />
+            {errors.subject?.message ? (
+              <FieldErrorMessage message={errors.subject.message} />
+            ) : null}
           </div>
         </div>
         <div className="flex flex-wrap mb-2 -mx-3">
@@ -126,15 +146,19 @@ const Contact = (): JSX.Element => {
               message
               <textarea
                 {...register('text')}
+                data-testid="form-input-message"
                 id="form-message"
                 className="block w-full px-4 py-3 mt-2 leading-tight border border-gray-200 rounded appearance-none resize transition duration-200 ease-in-out focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none form-textarea"
                 rows={10}
               />
             </label>
-            <FieldErrorMessage message={errors.text?.message} />
+            {errors.text?.message ? (
+              <FieldErrorMessage message={errors.text.message} />
+            ) : null}
           </div>
         </div>
         <button
+          data-testid="form-submit-button"
           disabled={isLoading}
           type="submit"
           className="float-right w-full px-6 py-3 text-base font-bold text-black rounded-lg focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none bg-tangerine-500 hover:bg-tangerine-600 duration-200"
