@@ -30,7 +30,7 @@
     "start": "craco start",
     "build": "craco build",
     "test": "npm run test:lint && npm run test:unit",
-    "test:unit": "craco test --runInBand --no-cache --watchAll=false",
+    "test:unit": "craco test ./src --runInBand --no-cache --watchAll=false --coverage",
     "eject": "react-scripts eject",
     "test:lint": "eslint './src/**/*.{ts,tsx}'",
     "security-audit": "npm audit --only=prod"
@@ -39,6 +39,13 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/pages/**/*",
+      "src/utils/**/*",
+      "src/components/**/*"
     ]
   },
   "browserslist": {
