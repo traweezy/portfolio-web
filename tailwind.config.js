@@ -28,6 +28,18 @@ module.exports = {
       indigo: colors.indigo,
       red: colors.rose,
       yellow: colors.amber,
+      blue: {
+        100: '#73838c',
+        200: '#5c6e79',
+        300: '#455966',
+        400: '#2d4553',
+        500: '#163040',
+        600: '#142B3A',
+        600: '#122633',
+        700: '#0F222D',
+        800: '#0d1d26',
+        900: '#0b1820',
+      },
     },
     fontFamily: {
       titillium: ['Titillium Web', 'sans-serif'],

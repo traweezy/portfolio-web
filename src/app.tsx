@@ -37,7 +37,7 @@ const App = (): JSX.Element => (
   <QueryClientProvider client={queryClient}>
     <Router>
       <div className="flex h-full">
-        <div className="p-4 border-r-2 border-black w-80 md:col-span-3 lg:col-span-1p">
+        <div className="p-4 border-r-2 border-white w-80 md:col-span-3 lg:col-span-1p">
           <Navigation routes={routes} />
         </div>
         <div className="w-full p-4">

@@ -18,7 +18,7 @@ describe('Given <NavItem />', () => {
     it('Should display name as black text', () => {
       const navItem = screen.getByText('Marklar');
       expect(navItem).toBeInTheDocument();
-      expect(navItem.className.includes('text-black')).toBeTruthy();
+      expect(navItem.className.includes('text-white')).toBeTruthy();
     });
   });
 

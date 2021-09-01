@@ -13,7 +13,7 @@ const Navigation = ({ routes }: NavigationProps): JSX.Element => {
     <div className="flex flex-col justify-between h-full">
       <div>
         <div className="mb-12">
-          <div className="inline-block text-4xl font-extrabold text-black uppercase">
+          <div className="inline-block text-4xl font-extrabold text-white uppercase">
             tyler
             <br />
             schumacher
