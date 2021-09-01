@@ -1,7 +1,5 @@
 import { screen, cleanup, fireEvent } from '@testing-library/react';
-import { rest } from 'msw';
 import { renderWithClient } from '../../services/testing-utils';
-import { server } from '../../setupTests';
 
 import Contact from './index';
 
