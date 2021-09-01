@@ -10,24 +10,27 @@ const Navigation = ({ routes }: NavigationProps): JSX.Element => {
   const location = useLocation();
 
   return (
-    <div className="h-full p-4">
-      <div className="mb-12">
-        <div className="inline-block text-4xl font-extrabold text-black uppercase">
-          tyler
-          <br />
-          schumacher
+    <div className="flex flex-col justify-between h-full">
+      <div>
+        <div className="mb-12">
+          <div className="inline-block text-4xl font-extrabold text-black uppercase">
+            tyler
+            <br />
+            schumacher
+          </div>
+        </div>
+        <div>
+          {routes.map(({ name, path }) => (
+            <Link data-testid={`${name}-link`} key={name} to={path}>
+              <NavItem name={name} isActive={location.pathname === path} />
+              <br />
+            </Link>
+          ))}
         </div>
       </div>
       <div>
-        {routes.map(({ name, path }) => (
-          <Link data-testid={`${name}-link`} key={name} to={path}>
-            <NavItem name={name} isActive={location.pathname === path} />
-            <br />
-          </Link>
-        ))}
-      </div>
-      <div>
-        <SocialIcon name="marklar" />
+        <SocialIcon name="gitHub" />
+        <SocialIcon name="linkedin" />
       </div>
     </div>
   );

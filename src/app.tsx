@@ -37,10 +37,10 @@ const App = (): JSX.Element => (
   <QueryClientProvider client={queryClient}>
     <Router>
       <div className="flex h-full">
-        <div className="border-r-2 border-black w-80 md:col-span-3 lg:col-span-1p">
+        <div className="p-4 border-r-2 border-black w-80 md:col-span-3 lg:col-span-1p">
           <Navigation routes={routes} />
         </div>
-        <div className="w-full">
+        <div className="w-full p-4">
           <Switch>
             {routes.map(({ name, path, exact, component: RouteComponent }) => (
               <Route key={name} path={path} exact={exact}>
