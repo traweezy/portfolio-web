@@ -7,6 +7,15 @@ module.exports = {
     extend: {},
   },
   theme: {
+    extend: {
+      height: theme => ({
+        'screen-3/4': '75vh',
+        'screen-1/2': '50vh',
+      }),
+      minHeight: theme => ({
+        700: '700px',
+      }),
+    },
     colors: {
       black: '#333',
       tangerine: {
@@ -40,6 +49,9 @@ module.exports = {
         800: '#0d1d26',
         900: '#0b1820',
       },
+      'light-gray': {
+        500: '#f7f7f7',
+      },
     },
     fontFamily: {
       titillium: ['Titillium Web', 'sans-serif'],
@@ -54,6 +66,7 @@ module.exports = {
       border: ['hover', 'active', 'focus'],
       borderColor: ['hover', 'active', 'focus'],
       backgroundColor: ['hover', 'active', 'focus'],
+      display: ['responsive', 'hover', 'focus'],
     },
   },
   plugins: [require('@tailwindcss/forms')],

@@ -11,7 +11,6 @@ describe('Given <Navigation />', () => {
     {
       name: 'home',
       path: '/',
-      exact: true,
       component: TestHome,
     },
   ];

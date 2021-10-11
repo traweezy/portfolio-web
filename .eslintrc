@@ -34,6 +34,7 @@
     "no-underscore-dangle": "off",
     "import/no-named-as-default": "off",
     "no-restricted-syntax": "off",
+    "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",

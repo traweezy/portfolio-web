@@ -1,11 +1,15 @@
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ToastContainer } from 'react-toastify';
 
 import Navigation from './components/navigation';
-import PageContainer from './components/page-container';
-import About from './pages/about/index';
+import ContentContainer from './components/content-container';
+import ConentSection from './components/content-section';
+import Hero from './pages/hero/index';
+import About from './pages/about';
+import Interests from './pages/interests';
 import Projects from './pages/projects';
+import Skills from './pages/skills';
 import Contact from './pages/contact';
 
 import 'react-toastify/dist/ReactToastify.css';
@@ -13,20 +17,27 @@ import 'react-toastify/dist/ReactToastify.css';
 const routes: RouteConfig[] = [
   {
     name: 'about',
-    path: '/',
-    exact: true,
+    path: '#about',
     component: About,
   },
   {
+    name: 'skills',
+    path: '#skills',
+    component: Skills,
+  },
+  {
+    name: 'interests',
+    path: '#interests',
+    component: Interests,
+  },
+  {
     name: 'projects',
-    path: '/projects',
-    exact: true,
+    path: '#projects',
     component: Projects,
   },
   {
     name: 'contact',
-    path: '/contact',
-    exact: true,
+    path: '#contact',
     component: Contact,
   },
 ];
@@ -37,20 +48,17 @@ const App = (): JSX.Element => (
   <QueryClientProvider client={queryClient}>
     <Router>
       <div className="flex h-full">
-        <div className="p-4 border-r-2 border-white w-80 md:col-span-3 lg:col-span-1p">
-          <Navigation routes={routes} />
-        </div>
-        <div className="w-full p-4">
-          <Switch>
-            {routes.map(({ name, path, exact, component: RouteComponent }) => (
-              <Route key={name} path={path} exact={exact}>
-                <PageContainer>
-                  <RouteComponent />
-                </PageContainer>
-              </Route>
+        <Navigation routes={routes} />
+        <ContentContainer>
+          <>
+            <Hero />
+            {routes.map(({ name, path, component: RouteComponent }) => (
+              <ConentSection id={path.replace('#', '')} key={name} name={name}>
+                <RouteComponent />
+              </ConentSection>
             ))}
-          </Switch>
-        </div>
+          </>
+        </ContentContainer>
       </div>
     </Router>
     <ToastContainer />

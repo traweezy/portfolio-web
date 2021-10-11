@@ -1,4 +1,3 @@
-import { ReactChild, ReactChildren } from 'react';
 import Particles from 'react-particle-backgrounds';
 
 const settings: ParticleBackgroundConfig = {
@@ -21,15 +20,19 @@ const settings: ParticleBackgroundConfig = {
   },
 };
 
-interface PageContainerProps {
-  children: ReactChild | ReactChildren;
+interface Props {
+  children: JSX.Element | JSX.Element[];
 }
 
-const PageContainer = ({ children }: PageContainerProps): JSX.Element => (
-  <>
+const ContentContainer = ({ children }: Props): JSX.Element => (
+  <div className="w-full overflow-auto">
     <Particles className="absolute z-0" settings={settings} />
-    <div className="relative z-10 h-full">{children}</div>
-  </>
+    <div className="relative w-full">
+      <div className="w-full p-4 mx-auto max-w-screen-lg">
+        <div className="relative z-10 h-full">{children}</div>
+      </div>
+    </div>
+  </div>
 );
 
-export default PageContainer;
+export default ContentContainer;

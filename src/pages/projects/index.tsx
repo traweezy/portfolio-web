@@ -1,3 +1,3 @@
-const Projects = (): JSX.Element => <h2>Projects</h2>;
+const Projects = (): JSX.Element => <div>coming soon</div>;
 
 export default Projects;

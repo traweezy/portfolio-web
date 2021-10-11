@@ -3,7 +3,6 @@ import { renderWithClient } from '../../services/testing-utils';
 
 import Contact from './index';
 
-const headerTestId = 'form-header';
 const nameInputTestId = 'form-input-email';
 const emailInputTestId = 'form-input-name';
 const subjectInputTestId = 'form-input-subject';
@@ -21,14 +20,12 @@ describe('Given <FieldErrorMessage />', () => {
     });
 
     it('Should render the basic fields', () => {
-      const headerEl = screen.getByTestId(headerTestId);
       const nameInputEl = screen.getByTestId(nameInputTestId);
       const emailInputEl = screen.getByTestId(emailInputTestId);
       const subjectInputEl = screen.getByTestId(subjectInputTestId);
       const messageInputEl = screen.getByTestId(messageInputTestId);
       const submitButtonInputEl = screen.getByTestId(submitButtonInputTestId);
 
-      expect(headerEl).toBeInTheDocument();
       expect(nameInputEl).toBeInTheDocument();
       expect(emailInputEl).toBeInTheDocument();
       expect(subjectInputEl).toBeInTheDocument();
