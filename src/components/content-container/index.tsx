@@ -1,4 +1,5 @@
 import Particles from 'react-particle-backgrounds';
+import Footer from '../footer';
 
 const settings: ParticleBackgroundConfig = {
   particle: {
@@ -31,6 +32,7 @@ const ContentContainer = ({ children }: Props): JSX.Element => (
       <div className="w-full p-4 mx-auto max-w-screen-lg">
         <div className="relative z-10 h-full">{children}</div>
       </div>
+      <Footer />
     </div>
   </div>
 );
