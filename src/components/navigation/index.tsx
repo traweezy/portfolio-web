@@ -11,7 +11,7 @@ const Navigation = ({ routes }: NavigationProps): JSX.Element => {
   const location = useLocation();
 
   return (
-    <div className="flex flex-col justify-between h-full p-4 bg-blue-500">
+    <nav className="flex-col justify-between hidden h-full p-4 bg-blue-500 lg:flex">
       <div>
         <div className="mb-12">
           <div className="inline-block text-4xl font-extrabold text-white uppercase">
@@ -33,7 +33,7 @@ const Navigation = ({ routes }: NavigationProps): JSX.Element => {
         <SocialIcon name="gitHub" />
         <SocialIcon name="linkedin" />
       </div>
-    </div>
+    </nav>
   );
 };
 

@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { ToastContainer } from 'react-toastify';
 
 import Navigation from './components/navigation';
+import MobileNavigation from './components/mobile-navigation';
 import ContentContainer from './components/content-container';
 import ConentSection from './components/content-section';
 import Hero from './pages/hero/index';
@@ -12,6 +13,7 @@ import Projects from './pages/projects';
 import Skills from './pages/skills';
 import Contact from './pages/contact';
 
+import 'react-fullscreen-menu/dist/index.css';
 import 'react-toastify/dist/ReactToastify.css';
 
 const routes: RouteConfig[] = [
@@ -48,6 +50,7 @@ const App = (): JSX.Element => (
   <QueryClientProvider client={queryClient}>
     <Router>
       <div className="flex h-full">
+        <MobileNavigation routes={routes} />
         <Navigation routes={routes} />
         <ContentContainer>
           <>

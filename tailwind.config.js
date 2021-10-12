@@ -15,6 +15,9 @@ module.exports = {
       minHeight: theme => ({
         700: '700px',
       }),
+      transitionProperty: {
+        height: 'height',
+      },
     },
     colors: {
       black: '#333',

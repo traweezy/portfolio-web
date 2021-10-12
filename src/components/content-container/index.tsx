@@ -29,7 +29,7 @@ const ContentContainer = ({ children }: Props): JSX.Element => (
   <div className="w-full overflow-auto">
     <Particles className="absolute z-0" settings={settings} />
     <div className="relative w-full">
-      <div className="w-full p-4 mx-auto max-w-screen-lg">
+      <div className="container w-full p-4 mx-auto">
         <div className="relative z-10 h-full">{children}</div>
       </div>
       <Footer />
