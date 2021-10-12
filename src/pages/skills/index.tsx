@@ -10,7 +10,7 @@ const skills: ButtonGridItem[] = [
   {
     name: 'CSS3',
     image: 'https://cdn.worldvectorlogo.com/logos/css-3.svg',
-    link: 'https://w7.pngwing.com/pngs/653/527/png-transparent-white-and-blue-shield-shape-logo-css3-cascading-style-sheets-computer-icons-html-emblem-miscellaneous-blue-angle.png',
+    link: 'https://developer.mozilla.org/en-US/docs/Glossary/CSS',
   },
   {
     name: 'Typescript',
