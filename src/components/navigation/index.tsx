@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import NavItem from './components/nav-item';
-import SocialIcon from './components/social-icon';
+import SocialIcon from '../social-icon';
 
 interface NavigationProps {
   routes: RouteConfig[];
@@ -30,8 +30,9 @@ const Navigation = ({ routes }: NavigationProps): JSX.Element => {
         </div>
       </div>
       <div>
-        <SocialIcon name="gitHub" />
-        <SocialIcon name="linkedin" />
+        <SocialIcon name="gitHub" url="https://github.com/traweezy" />
+        <SocialIcon name="email" url="mailto:tyler.schumacher@protonmail.com" />
+        <SocialIcon name="resume" url="https://github.com/traweezy" />
       </div>
     </nav>
   );

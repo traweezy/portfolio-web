@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Divide as Hamburger } from 'hamburger-react';
-
 import { HashLink } from 'react-router-hash-link';
 import NavItem from '../navigation/components/nav-item';
+import SocialIcon from '../social-icon';
 
 interface NavigationProps {
   routes: RouteConfig[];
@@ -52,6 +52,14 @@ const MobileNavigation = ({ routes }: NavigationProps): JSX.Element => {
                   <br />
                 </HashLink>
               ))}
+            </div>
+            <div className="absolute bottom-24">
+              <SocialIcon name="gitHub" url="https://github.com/traweezy" />
+              <SocialIcon
+                name="email"
+                url="mailto:tyler.schumacher@protonmail.com"
+              />
+              <SocialIcon name="resume" url="https://github.com/traweezy" />
             </div>
           </div>
         </div>
