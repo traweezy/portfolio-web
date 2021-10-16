@@ -7,7 +7,7 @@ interface Props {
 const ButtonGrid = ({ items }: Props): JSX.Element => {
   return (
     <div className="container mx-auto">
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
         {items.map(item => (
           <SkillButton key={item.name} item={item} />
         ))}

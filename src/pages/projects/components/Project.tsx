@@ -41,7 +41,7 @@ const Projects = ({ project }: Props): JSX.Element => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10">
-      <div className="flex items-center col-span-1">
+      <div className="flex items-center col-span-1 mb-6">
         <img src={project.image} alt={project.name} />
       </div>
       <div className="col-span-1">
