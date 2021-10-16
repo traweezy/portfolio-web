@@ -67,7 +67,7 @@ const Projects = ({ project }: Props): JSX.Element => {
               key={technology}
               src={logos[technology]}
               alt={technology}
-              className="w-10 pr-2"
+              className="w-10 pr-2 mr-1"
             />
           ))}
         </div>
