@@ -50,7 +50,9 @@ const Projects = ({ project }: Props): JSX.Element => {
           {descriptionArr.map((chunk, index) => (
             <li
               key={chunk}
-              className={index === descriptionArr.length - 1 ? 'pb-2' : 'pb-4'}
+              className={
+                index === descriptionArr.length - 1 ? 'md:pb-2' : 'pb-1 md:pb-4'
+              }
             >
               {chunk}
             </li>
