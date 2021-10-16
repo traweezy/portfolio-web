@@ -37,7 +37,7 @@ const MobileNavigation = ({ routes }: NavigationProps): JSX.Element => {
             </button>
           </div>
           <div
-            className={`flex items-center justify-center align-center fixed top-0 left-0 z-30 w-full ${heightClass} overflow-y-hidden bg-blue-500 transition-height duration-500 ease-in-out`}
+            className={`flex items-center justify-center align-center fixed top-20 left-0 z-30 w-full ${heightClass} overflow-y-hidden bg-blue-500 transition-height duration-500 ease-in-out`}
           >
             <div className="-mt-10 text-center">
               {routes.map(({ name, path }) => (
