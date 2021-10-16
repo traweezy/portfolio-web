@@ -25,6 +25,7 @@
     "react-fullscreen-menu": "^1.0.0",
     "react-hook-form": "^7.13.0",
     "react-particle-backgrounds": "^1.0.2",
+    "react-query": "^3.27.0",
     "react-router-dom": "^5.2.0",
     "react-router-hash-link": "^2.4.3",
     "react-router-hash-link-offset": "^1.2.0",

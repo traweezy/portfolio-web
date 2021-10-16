@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
+import { useQuery } from 'react-query';
+
 import ExampleProjection from '../../assets/example-project.png';
 import Project from './components/Project';
 import Spinner from '../../components/spinner';
@@ -7,20 +10,21 @@ import Api from '../../services/api';
 const api = new Api();
 
 const Projects = (): JSX.Element => {
-  const [projects, setProjects] = useState<Project[] | null>(null);
+  const { data, isLoading } = useQuery('projects', api.getProjects, {
+    onError: (error: Error) => {
+      toast.error(error.message, { position: 'bottom-right' });
+    },
+  });
 
-  useEffect(() => {
-    if (!projects) {
-      api.getProjects().then(returnedProjects => setProjects(returnedProjects));
-    }
-  }, [projects]);
   return (
     <div>
-      {Array.isArray(projects) ? (
-        projects
-          .sort((projectX, projectY) => projectX.id - projectY.id)
-          .map((project, index) => {
-            const isLast = index === projects.length - 1;
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        data
+          ?.sort((projectX, projectY) => projectX.id - projectY.id)
+          ?.map((project, index) => {
+            const isLast = index === data.length - 1;
             return (
               <div key={project.id} className={isLast ? '' : 'mb-32'}>
                 <Project project={{ ...project, image: ExampleProjection }} />
@@ -28,8 +32,6 @@ const Projects = (): JSX.Element => {
               </div>
             );
           })
-      ) : (
-        <Spinner />
       )}
     </div>
   );
