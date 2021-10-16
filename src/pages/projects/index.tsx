@@ -25,9 +25,9 @@ const Projects = (): JSX.Element => {
           ?.map((project, index) => {
             const isLast = index === data.length - 1;
             return (
-              <div key={project.id} className={isLast ? '' : 'mb-16 md:mb-32'}>
+              <div key={project.id} className={isLast ? '' : 'mb-16 lg:mb-32'}>
                 <Project project={{ ...project, image: ExampleProjection }} />
-                {isLast ? null : <hr className="mt-16  md:mt-32" />}
+                {isLast ? null : <hr className="mt-16  lg:mt-32" />}
               </div>
             );
           }) ?? null

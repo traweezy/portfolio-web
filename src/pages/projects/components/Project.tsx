@@ -43,7 +43,7 @@ const Projects = ({ project }: Props): JSX.Element => {
     window.open(url, '_blank')?.focus();
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10">
       <div className="flex items-center mb-6 col-span-1">
         <img src={project.image} alt={project.name} />
       </div>
@@ -54,7 +54,7 @@ const Projects = ({ project }: Props): JSX.Element => {
             <li
               key={chunk}
               className={
-                index === descriptionArr.length - 1 ? 'md:pb-2' : 'pb-1 md:pb-4'
+                index === descriptionArr.length - 1 ? 'lg:pb-2' : 'pb-1 lg:pb-4'
               }
             >
               {chunk}
