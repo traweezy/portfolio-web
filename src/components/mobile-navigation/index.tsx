@@ -37,9 +37,9 @@ const MobileNavigation = ({ routes }: NavigationProps): JSX.Element => {
             </button>
           </div>
           <div
-            className={`flex items-center justify-center align-center fixed top-20 left-0 z-30 w-full ${heightClass} overflow-y-hidden bg-blue-500 transition-height duration-500 ease-in-out`}
+            className={`flex items-center justify-center fixed top-20 left-0 z-30 w-full ${heightClass} overflow-y-hidden bg-blue-500 transition-height duration-500 ease-in-out`}
           >
-            <div className="-mt-10 text-center">
+            <div className="text-center -mt-60">
               {routes.map(({ name, path }) => (
                 <HashLink
                   data-testid={`${name}-link`}
