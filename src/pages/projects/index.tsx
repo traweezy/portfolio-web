@@ -30,7 +30,7 @@ const Projects = (): JSX.Element => {
                 {isLast ? null : <hr className="mt-32" />}
               </div>
             );
-          })
+          }) ?? null
       )}
     </div>
   );
