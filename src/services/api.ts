@@ -1,4 +1,3 @@
-import { AxiosResponse } from 'axios';
 import HttpClient from './http-client';
 
 class Api extends HttpClient {
@@ -6,10 +5,10 @@ class Api extends HttpClient {
     super('https://tyler-schumacher-portfolio-api.herokuapp.com/rest');
   }
 
-  public sendEmail = (
-    email: Omit<Email, 'name' | 'email'>,
-  ): Promise<AxiosResponse<Email>> =>
-    this.instance.post<Email>(`/send-email`, email);
+  public sendEmail = (email: Omit<Email, 'name' | 'email'>): Promise<Email> =>
+    this.instance.post(`/send-email`, email);
+
+  public getProjects = (): Promise<Project[]> => this.instance.get('/project');
 }
 
 export default Api;
