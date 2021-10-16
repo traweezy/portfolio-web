@@ -38,7 +38,6 @@ const ContentSection = ({ children, name, id }: Props): JSX.Element => {
           <div className="h-20" />
         </>
       ) : null}
-
       <div
         id={isMediumScreenSize ? '' : id}
         className="flex flex-col items-center lg:mb-32"
