@@ -39,6 +39,9 @@ const Projects = ({ project }: Props): JSX.Element => {
 
   const descriptionArr = project.description.split('.').filter(Boolean);
 
+  const handleClick = (url: string): void =>
+    window.open(url, '_blank')?.focus();
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10">
       <div className="flex items-center mb-6 col-span-1">
@@ -69,22 +72,17 @@ const Projects = ({ project }: Props): JSX.Element => {
           ))}
         </div>
         <div className="flex flex-row">
-          {links.map(link => (
-            <a
-              type="button"
-              key={link?.url}
-              href={link?.url}
-              target="_blank"
-              rel="noreferrer"
-            >
+          {links.map(link =>
+            link ? (
               <button
                 type="button"
                 className="px-6 py-3 mr-4 text-base font-bold text-white rounded-lg focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none bg-tangerine-500 hover:bg-tangerine-600 duration-200"
+                onClick={() => handleClick(link.url)}
               >
-                {link?.type}
+                {link.type}
               </button>
-            </a>
-          ))}
+            ) : null,
+          )}
         </div>
       </div>
     </div>

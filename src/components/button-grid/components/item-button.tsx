@@ -5,7 +5,7 @@ interface Props {
 const SkillButton = ({ item }: Props): JSX.Element => (
   <a
     title={item.name}
-    className="flex flex-col items-center justify-around p-3 text-center bg-gray-100 border-2 border-gray-300 hover:shadow-xl rounded-xl hover:bg-tangerine-500 transition duration-500 ease-in-out"
+    className="flex flex-col items-center justify-around p-3 text-center bg-gray-100 border-2 border-gray-300 max-w-sm md:hover:shadow-xl rounded-md md:rounded-xl md:hover:bg-tangerine-500 transition duration-500 ease-in-out"
     type="button"
     href={item.link}
     target="_blank"
