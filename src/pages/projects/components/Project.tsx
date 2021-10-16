@@ -74,9 +74,13 @@ const Projects = ({ project }: Props): JSX.Element => {
               href={link?.url}
               target="_blank"
               rel="noreferrer"
-              className="px-6 py-3 mr-4 text-base font-bold text-white rounded-lg focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none bg-tangerine-500 hover:bg-tangerine-600 duration-200"
             >
-              {link?.type}
+              <button
+                type="button"
+                className="px-6 py-3 mr-4 text-base font-bold text-white rounded-lg focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none bg-tangerine-500 hover:bg-tangerine-600 duration-200"
+              >
+                {link?.type}
+              </button>
             </a>
           ))}
         </div>
