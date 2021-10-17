@@ -1,4 +1,13 @@
 import { GitHub, Linkedin, Mail, Download } from 'react-feather';
+// @ts-expect-error: Let the resume be
+import Resume from '../../assets/resume.pdf';
+
+const downloadResume = () => {
+  const link = document.createElement('a');
+  link.href = Resume;
+  link.download = Resume.substr(Resume.lastIndexOf('/') + 1);
+  link.click();
+};
 
 type SocialIconName = 'gitHub' | 'linkedin' | 'email' | 'resume';
 
@@ -8,14 +17,13 @@ interface SocialIconProps {
 }
 
 const SocialIcon = ({ name, url }: SocialIconProps): JSX.Element => {
-  const handleClick = (linkUrl: string): void =>
-    window.open(linkUrl, '_blank')?.focus();
+  const handleClick = (): void => window.open(url, '_blank')?.focus();
 
   const icons: Record<SocialIconName, JSX.Element> = {
-    gitHub: <GitHub onClick={() => handleClick(url)} />,
-    linkedin: <Linkedin onClick={() => handleClick(url)} />,
-    email: <Mail onClick={() => handleClick(url)} />,
-    resume: <Download onClick={() => handleClick(url)} />,
+    gitHub: <GitHub onClick={() => handleClick()} />,
+    linkedin: <Linkedin onClick={() => handleClick()} />,
+    email: <Mail onClick={() => handleClick()} />,
+    resume: <Download onClick={() => downloadResume()} />,
   };
 
   return (

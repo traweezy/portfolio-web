@@ -1,4 +1,5 @@
 declare module 'react-particle-backgrounds';
+declare module '../../assets/resume.pdf';
 
 interface ParticleBackgroundConfig {
   particle: Particle;
