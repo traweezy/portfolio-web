@@ -4,9 +4,6 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false,
   theme: {
-    extend: {},
-  },
-  theme: {
     extend: {
       height: theme => ({
         'screen-3/4': '75vh',
