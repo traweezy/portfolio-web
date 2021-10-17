@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.fb150f54.chunk.css",
-    "main.js": "/static/js/main.d3bf238b.chunk.js",
-    "main.js.map": "/static/js/main.d3bf238b.chunk.js.map",
+    "main.js": "/static/js/main.f438badd.chunk.js",
+    "main.js.map": "/static/js/main.f438badd.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5dc0d18b.js",
     "runtime-main.js.map": "/static/js/runtime-main.5dc0d18b.js.map",
     "static/css/2.74782252.chunk.css": "/static/css/2.74782252.chunk.css",
@@ -31,6 +31,7 @@
     "static/media/postgresql.ae92b576.svg": "/static/media/postgresql.ae92b576.svg",
     "static/media/prisma.671d8645.svg": "/static/media/prisma.671d8645.svg",
     "static/media/react.e68b35f4.svg": "/static/media/react.e68b35f4.svg",
+    "static/media/resume.e05b884d.pdf": "/static/media/resume.e05b884d.pdf",
     "static/media/snowmobiles.60dd4859.png": "/static/media/snowmobiles.60dd4859.png",
     "static/media/tailwind.315d0ac2.svg": "/static/media/tailwind.315d0ac2.svg",
     "static/media/typescript.a6305a73.svg": "/static/media/typescript.a6305a73.svg"
@@ -40,6 +41,6 @@
     "static/css/2.74782252.chunk.css",
     "static/js/2.5a02643f.chunk.js",
     "static/css/main.fb150f54.chunk.css",
-    "static/js/main.d3bf238b.chunk.js"
+    "static/js/main.f438badd.chunk.js"
   ]
 }
