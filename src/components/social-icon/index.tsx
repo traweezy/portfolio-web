@@ -29,4 +29,8 @@ const SocialIcon = ({ name, url }: SocialIconProps): JSX.Element => {
   );
 };
 
+SocialIcon.defaultProps = {
+  url: '',
+};
+
 export default SocialIcon;

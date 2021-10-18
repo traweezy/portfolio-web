@@ -1,5 +1,5 @@
 // @ts-expect-error: Let the resume be
-import Resume from '../assets/tyler-schumacher-resume.pdf';
+import Resume from '../assets/tyler-schumacher-resume.PDF';
 
 const downloadResume = () => {
   const link = document.createElement('a');
