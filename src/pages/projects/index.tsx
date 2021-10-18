@@ -21,7 +21,9 @@ const Projects = (): JSX.Element => {
         <Spinner />
       ) : (
         data
-          ?.sort((projectX, projectY) => projectX.id - projectY.id)
+          ?.sort(
+            (projectX, projectY) => projectX.sortIndex - projectY.sortIndex,
+          )
           ?.map((project, index) => {
             const isLast = index === data.length - 1;
             return (

@@ -13,4 +13,6 @@ interface Project {
   image: string;
   technologies: string[];
   links: Link[];
+  sortIndex: number;
+  isWorkInProgress: boolean;
 }

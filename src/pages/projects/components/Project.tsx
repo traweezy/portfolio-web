@@ -8,7 +8,9 @@ import PostgreSQLLogo from '../../../assets/postgresql.svg';
 import DiscordLogo from '../../../assets/discord.svg';
 import HTMLLogo from '../../../assets/html.svg';
 import CSSLogo from '../../../assets/css.svg';
+import GraphQLLogo from '../../../assets/graphql.svg';
 import jQueryLogo from '../../../assets/jquery.svg';
+import MaterialUI from '../../../assets/material-ui.svg';
 import NoRespectBot from '../../../assets/no-respect-bot.png';
 import PortfolioApi from '../../../assets/portfolio-api.png';
 import TwistedRope from '../../../assets/twisted-rope.png';
@@ -26,6 +28,8 @@ const logos: Record<string, string> = {
   html5: HTMLLogo,
   css3: CSSLogo,
   jquery: jQueryLogo,
+  graphql: GraphQLLogo,
+  materialui: MaterialUI,
 };
 
 const mockUps: Record<string, string> = {
@@ -58,7 +62,11 @@ const Projects = ({ project }: Props): JSX.Element => {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10">
       <div className="flex items-center mb-6 col-span-1">
         <img
-          src={mockUps[project.name.toLowerCase()] ?? project.image}
+          src={
+            project.isWorkInProgress
+              ? mockUps.wip
+              : mockUps[project.name.toLowerCase()] ?? project.image
+          }
           alt={project.name}
         />
       </div>
