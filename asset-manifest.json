@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.fb150f54.chunk.css",
-    "main.js": "/static/js/main.47571ce6.chunk.js",
-    "main.js.map": "/static/js/main.47571ce6.chunk.js.map",
+    "main.js": "/static/js/main.99259f9a.chunk.js",
+    "main.js.map": "/static/js/main.99259f9a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5dc0d18b.js",
     "runtime-main.js.map": "/static/js/runtime-main.5dc0d18b.js.map",
     "static/css/2.74782252.chunk.css": "/static/css/2.74782252.chunk.css",
@@ -21,10 +21,12 @@
     "static/media/discord.5276e84b.svg": "/static/media/discord.5276e84b.svg",
     "static/media/example-project.21eed98a.png": "/static/media/example-project.21eed98a.png",
     "static/media/gaming.5bcde3b4.png": "/static/media/gaming.5bcde3b4.png",
+    "static/media/graphql.c0d2b1e1.svg": "/static/media/graphql.c0d2b1e1.svg",
     "static/media/html.f318c8b1.svg": "/static/media/html.f318c8b1.svg",
     "static/media/javascript.00f3e5cf.svg": "/static/media/javascript.00f3e5cf.svg",
     "static/media/jquery.fcc48022.svg": "/static/media/jquery.fcc48022.svg",
     "static/media/linux.24a26a2e.png": "/static/media/linux.24a26a2e.png",
+    "static/media/material-ui.fd510ed8.svg": "/static/media/material-ui.fd510ed8.svg",
     "static/media/motocross.41ee39f0.png": "/static/media/motocross.41ee39f0.png",
     "static/media/motorcycles.58fa965a.png": "/static/media/motorcycles.58fa965a.png",
     "static/media/no-respect-bot.40c6a4a8.png": "/static/media/no-respect-bot.40c6a4a8.png",
@@ -45,6 +47,6 @@
     "static/css/2.74782252.chunk.css",
     "static/js/2.5a02643f.chunk.js",
     "static/css/main.fb150f54.chunk.css",
-    "static/js/main.47571ce6.chunk.js"
+    "static/js/main.99259f9a.chunk.js"
   ]
 }
