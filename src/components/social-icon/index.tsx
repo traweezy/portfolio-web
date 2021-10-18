@@ -1,19 +1,11 @@
 import { GitHub, Linkedin, Mail, Download } from 'react-feather';
-// @ts-expect-error: Let the resume be
-import Resume from '../../assets/resume.pdf';
-
-const downloadResume = () => {
-  const link = document.createElement('a');
-  link.href = Resume;
-  link.download = Resume.substr(Resume.lastIndexOf('/') + 1);
-  link.click();
-};
+import downloadResume from '../../services/download-resume';
 
 type SocialIconName = 'gitHub' | 'linkedin' | 'email' | 'resume';
 
 interface SocialIconProps {
   name: SocialIconName;
-  url: string;
+  url?: string;
 }
 
 const SocialIcon = ({ name, url }: SocialIconProps): JSX.Element => {

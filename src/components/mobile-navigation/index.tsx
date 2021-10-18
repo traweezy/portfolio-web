@@ -59,7 +59,7 @@ const MobileNavigation = ({ routes }: NavigationProps): JSX.Element => {
                 name="email"
                 url="mailto:tyler.schumacher@protonmail.com"
               />
-              <SocialIcon name="resume" url="https://github.com/traweezy" />
+              <SocialIcon name="resume" />
             </div>
           </div>
         </div>

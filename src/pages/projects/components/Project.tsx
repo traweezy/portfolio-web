@@ -9,6 +9,10 @@ import DiscordLogo from '../../../assets/discord.svg';
 import HTMLLogo from '../../../assets/html.svg';
 import CSSLogo from '../../../assets/css.svg';
 import jQueryLogo from '../../../assets/jquery.svg';
+import NoRespectBot from '../../../assets/no-respect-bot.png';
+import PortfolioApi from '../../../assets/portfolio-api.png';
+import TwistedRope from '../../../assets/twisted-rope.png';
+import WorkInProgress from '../../../assets/work-in-progress.png';
 
 const logos: Record<string, string> = {
   javascript: JavascriptLogo,
@@ -22,6 +26,14 @@ const logos: Record<string, string> = {
   html5: HTMLLogo,
   css3: CSSLogo,
   jquery: jQueryLogo,
+};
+
+const mockUps: Record<string, string> = {
+  'no respect bot': NoRespectBot,
+  // 'portfolio website': TypescriptLogo,
+  'portfolio api': PortfolioApi,
+  'twisted rope company website': TwistedRope,
+  wip: WorkInProgress,
 };
 
 interface Props {
@@ -45,7 +57,10 @@ const Projects = ({ project }: Props): JSX.Element => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10">
       <div className="flex items-center mb-6 col-span-1">
-        <img src={project.image} alt={project.name} />
+        <img
+          src={mockUps[project.name.toLowerCase()] ?? project.image}
+          alt={project.name}
+        />
       </div>
       <div className="col-span-1">
         <div className="pb-6 text-xl font-bold">{project.name}</div>
@@ -62,7 +77,7 @@ const Projects = ({ project }: Props): JSX.Element => {
           ))}
         </ul>
         <div className="flex flex-row items-center pb-6">
-          {project?.technologies?.filter(Boolean)?.map(technology => (
+          {project.technologies?.filter(Boolean)?.map(technology => (
             <img
               key={technology}
               src={logos[technology]}
