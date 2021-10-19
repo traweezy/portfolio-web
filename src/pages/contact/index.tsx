@@ -73,7 +73,7 @@ const Contact = (): JSX.Element => {
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="flex flex-wrap mb-6 -mx-3">
-        <div className="w-full pr-3 mb-6 md:w-1/2 md:mb-0">
+        <div className="w-full pr-0 mb-6 md:pr-3 md:w-1/2 md:mb-0">
           <label
             className="block mb-2 text-base font-bold tracking-wide capitalize"
             htmlFor="form-name"
