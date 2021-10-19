@@ -9,7 +9,10 @@ interface SocialIconProps {
 }
 
 const SocialIcon = ({ name, url }: SocialIconProps): JSX.Element => {
-  const handleClick = (): void => window.open(url, '_blank')?.focus();
+  const handleClick = (): void => {
+    console.log(url);
+    window.open(url, '_blank')?.focus();
+  };
 
   const icons: Record<SocialIconName, JSX.Element> = {
     gitHub: <GitHub onClick={() => handleClick()} />,
@@ -22,7 +25,7 @@ const SocialIcon = ({ name, url }: SocialIconProps): JSX.Element => {
     <button
       name={name}
       type="button"
-      className="p-2 mr-2 rounded-full ring-4 ring-tangerine-500 ring-opacity-0 hover:ring-opacity-100 transition duration-500 ease-in-out"
+      className="p-2 mr-2 rounded-full ring-4 ring-tangerine-600 ring-opacity-0 hover:ring-opacity-100 transition duration-500 ease-in-out"
     >
       {icons[name]}
     </button>

@@ -15,14 +15,17 @@ module.exports = {
       transitionProperty: {
         height: 'height',
       },
+      boxShadow: {
+        hero: '12px 0 #ffb75f, 24px 0 #ffc57f, 36px 0 #ffd49f',
+      },
     },
     colors: {
       black: '#333',
       tangerine: {
-        100: '#ffe5c5',
-        200: '#ffd9ab',
-        300: '#ffce92',
-        400: '#ffc278',
+        100: '#ffd49f',
+        200: '#ffcd8f',
+        300: '#ffc57f',
+        400: '#ffbe6f',
         500: '#ffb75f',
         600: '#ffac45',
         600: '#ff9512',

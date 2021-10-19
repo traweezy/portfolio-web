@@ -1,3 +1,4 @@
+import LinkButton from '../../../components/link-button';
 import JavascriptLogo from '../../../assets/javascript.svg';
 import TypescriptLogo from '../../../assets/typescript.svg';
 import ReactLogo from '../../../assets/react.svg';
@@ -13,6 +14,7 @@ import jQueryLogo from '../../../assets/jquery.svg';
 import MaterialUI from '../../../assets/material-ui.svg';
 import NoRespectBot from '../../../assets/no-respect-bot.png';
 import PortfolioApi from '../../../assets/portfolio-api.png';
+import Portfolio from '../../../assets/portfolio.png';
 import TwistedRope from '../../../assets/twisted-rope.png';
 import WorkInProgress from '../../../assets/work-in-progress.png';
 
@@ -34,7 +36,7 @@ const logos: Record<string, string> = {
 
 const mockUps: Record<string, string> = {
   'no respect bot': NoRespectBot,
-  // 'portfolio website': TypescriptLogo,
+  'portfolio website': Portfolio,
   'portfolio api': PortfolioApi,
   'twisted rope company website': TwistedRope,
   wip: WorkInProgress,
@@ -97,13 +99,9 @@ const Projects = ({ project }: Props): JSX.Element => {
         <div className="flex flex-row">
           {links.map(link =>
             link ? (
-              <button
-                type="button"
-                className="px-6 py-3 mr-4 text-base font-bold text-white rounded-lg focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none bg-tangerine-500 hover:bg-tangerine-600 duration-200"
-                onClick={() => handleClick(link.url)}
-              >
+              <LinkButton onClick={() => handleClick(link.url)}>
                 {link.type}
-              </button>
+              </LinkButton>
             ) : null,
           )}
         </div>

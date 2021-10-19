@@ -64,6 +64,11 @@ const skills: ButtonGridItem[] = [
     link: 'https://www.elastic.co/',
   },
   {
+    name: 'Redis',
+    image: 'https://cdn.worldvectorlogo.com/logos/redis.svg',
+    link: 'https://redis.io/',
+  },
+  {
     name: 'Windows',
     image: 'https://cdn.worldvectorlogo.com/logos/microsoft-windows-22.svg',
     link: 'https://www.microsoft.com/en-us/windows',
@@ -87,11 +92,6 @@ const skills: ButtonGridItem[] = [
     name: 'Jest',
     image: 'https://nx.dev/documentation/latest/shared/jest-logo.png',
     link: 'https://jestjs.io/',
-  },
-  {
-    name: 'Git',
-    image: 'https://cdn.worldvectorlogo.com/logos/git-icon.svg',
-    link: 'https://git-scm.com/',
   },
 ];
 

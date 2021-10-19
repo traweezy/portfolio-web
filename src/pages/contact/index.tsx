@@ -82,7 +82,7 @@ const Contact = (): JSX.Element => {
             <input
               {...register('name')}
               data-testid="form-input-name"
-              className="block w-full py-3 pr-3 mt-2 mb-3 leading-tight text-black border border-gray-200 rounded appearance-none transition duration-200 ease-in-out focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none form-input"
+              className="block w-full py-3 pr-3 mt-2 mb-3 leading-tight text-black border border-gray-200 rounded appearance-none transition duration-200 ease-in-out focus:border-tangerine-600 focus:ring-1 focus:ring-tangerine-600 focus:border-none form-input"
               id="form-name"
               type="text"
             />
@@ -100,7 +100,7 @@ const Contact = (): JSX.Element => {
             <input
               {...register('email')}
               data-testid="form-input-email"
-              className="block w-full py-3 pl-3 mt-2 leading-tight text-black border border-gray-200 rounded appearance-none transition duration-200 ease-in-out focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none form-input"
+              className="block w-full py-3 pl-3 mt-2 leading-tight text-black border border-gray-200 rounded appearance-none transition duration-200 ease-in-out focus:border-tangerine-600 focus:ring-1 focus:ring-tangerine-600 focus:border-none form-input"
               id="form-email"
               type="email"
             />
@@ -120,7 +120,7 @@ const Contact = (): JSX.Element => {
             <input
               {...register('subject')}
               data-testid="form-input-subject"
-              className="block w-full py-3 mt-2 mb-3 leading-tight text-black border border-gray-200 rounded appearance-none transition duration-200 ease-in-out focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none form-input"
+              className="block w-full py-3 mt-2 mb-3 leading-tight text-black border border-gray-200 rounded appearance-none transition duration-200 ease-in-out focus:border-tangerine-600 focus:ring-1 focus:ring-tangerine-600 focus:border-none form-input"
               id="form-subject"
               type="text"
             />
@@ -141,7 +141,7 @@ const Contact = (): JSX.Element => {
               {...register('text')}
               data-testid="form-input-message"
               id="form-message"
-              className="block w-full py-3 mt-2 leading-tight text-black border border-gray-200 rounded appearance-none resize transition duration-200 ease-in-out focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none form-textarea"
+              className="block w-full py-3 mt-2 leading-tight text-black border border-gray-200 rounded appearance-none resize transition duration-200 ease-in-out focus:border-tangerine-600 focus:ring-1 focus:ring-tangerine-600 focus:border-none form-textarea"
               rows={10}
             />
           </label>
@@ -154,7 +154,7 @@ const Contact = (): JSX.Element => {
         data-testid="form-submit-button"
         disabled={isLoading}
         type="submit"
-        className="float-right w-full px-6 py-3 text-base font-bold text-white rounded-lg focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none bg-tangerine-500 hover:bg-tangerine-600 duration-200"
+        className="float-right w-full px-6 py-3 text-base font-bold text-white rounded-lg focus:border-tangerine-600 focus:ring-1 focus:ring-tangerine-600 focus:border-none bg-tangerine-600 hover:bg-tangerine-600 duration-200"
       >
         {isLoading ? (
           <div className="flex items-center justify-center pr-4">

@@ -1,3 +1,4 @@
+import LinkButton from '../../components/link-button';
 import downloadResume from '../../services/download-resume';
 
 const About = (): JSX.Element => {
@@ -19,20 +20,8 @@ const About = (): JSX.Element => {
         Also creating server side code that is scalable and powerful.
       </p>
       <div className="flex flex-row">
-        <button
-          type="button"
-          className="px-6 py-3 mr-4 text-base font-bold text-white rounded-lg focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none bg-tangerine-500 hover:bg-tangerine-600 duration-200"
-          onClick={() => downloadResume()}
-        >
-          Resume
-        </button>
-        <button
-          type="button"
-          className="px-6 py-3 mr-4 text-base font-bold text-white rounded-lg focus:border-tangerine-500 focus:ring-1 focus:ring-tangerine-500 focus:border-none bg-tangerine-500 hover:bg-tangerine-600 duration-200"
-          onClick={() => handleGithubClick()}
-        >
-          Github
-        </button>
+        <LinkButton onClick={() => downloadResume()}>Resume</LinkButton>
+        <LinkButton onClick={() => handleGithubClick()}>Github</LinkButton>
       </div>
     </div>
   );
