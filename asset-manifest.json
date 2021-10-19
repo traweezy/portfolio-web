@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.fb150f54.chunk.css",
-    "main.js": "/static/js/main.99259f9a.chunk.js",
-    "main.js.map": "/static/js/main.99259f9a.chunk.js.map",
+    "main.css": "/static/css/main.277b4987.chunk.css",
+    "main.js": "/static/js/main.733c19a7.chunk.js",
+    "main.js.map": "/static/js/main.733c19a7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5dc0d18b.js",
     "runtime-main.js.map": "/static/js/runtime-main.5dc0d18b.js.map",
     "static/css/2.74782252.chunk.css": "/static/css/2.74782252.chunk.css",
@@ -12,9 +12,8 @@
     "static/js/3.9bd30da7.chunk.js.map": "/static/js/3.9bd30da7.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.74782252.chunk.css.map": "/static/css/2.74782252.chunk.css.map",
-    "static/css/main.fb150f54.chunk.css.map": "/static/css/main.fb150f54.chunk.css.map",
+    "static/css/main.277b4987.chunk.css.map": "/static/css/main.277b4987.chunk.css.map",
     "static/js/2.5a02643f.chunk.js.LICENSE.txt": "/static/js/2.5a02643f.chunk.js.LICENSE.txt",
-    "static/media/avatar-hex.ed80e090.png": "/static/media/avatar-hex.ed80e090.png",
     "static/media/bass.ab19fa38.png": "/static/media/bass.ab19fa38.png",
     "static/media/books.426ae468.png": "/static/media/books.426ae468.png",
     "static/media/css.4e47c312.svg": "/static/media/css.4e47c312.svg",
@@ -32,12 +31,14 @@
     "static/media/no-respect-bot.40c6a4a8.png": "/static/media/no-respect-bot.40c6a4a8.png",
     "static/media/nodejs.615ffbea.svg": "/static/media/nodejs.615ffbea.svg",
     "static/media/portfolio-api.0639b8c9.png": "/static/media/portfolio-api.0639b8c9.png",
+    "static/media/portfolio.c1f81e35.png": "/static/media/portfolio.c1f81e35.png",
     "static/media/postgresql.ae92b576.svg": "/static/media/postgresql.ae92b576.svg",
     "static/media/prisma.671d8645.svg": "/static/media/prisma.671d8645.svg",
     "static/media/react.e68b35f4.svg": "/static/media/react.e68b35f4.svg",
     "static/media/snowmobiles.60dd4859.png": "/static/media/snowmobiles.60dd4859.png",
     "static/media/tailwind.315d0ac2.svg": "/static/media/tailwind.315d0ac2.svg",
     "static/media/twisted-rope.86f480c5.png": "/static/media/twisted-rope.86f480c5.png",
+    "static/media/tyler-schumacher-crop-bw.62ae0cf5.jpg": "/static/media/tyler-schumacher-crop-bw.62ae0cf5.jpg",
     "static/media/tyler-schumacher-resume.98e8b803.PDF": "/static/media/tyler-schumacher-resume.98e8b803.PDF",
     "static/media/typescript.a6305a73.svg": "/static/media/typescript.a6305a73.svg",
     "static/media/work-in-progress.4529c3b3.png": "/static/media/work-in-progress.4529c3b3.png"
@@ -46,7 +47,7 @@
     "static/js/runtime-main.5dc0d18b.js",
     "static/css/2.74782252.chunk.css",
     "static/js/2.5a02643f.chunk.js",
-    "static/css/main.fb150f54.chunk.css",
-    "static/js/main.99259f9a.chunk.js"
+    "static/css/main.277b4987.chunk.css",
+    "static/js/main.733c19a7.chunk.js"
   ]
 }
