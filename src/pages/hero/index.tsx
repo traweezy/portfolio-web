@@ -1,14 +1,18 @@
-// import { Radar } from 'react-chartjs-2';
-
+import MobileAvatar from '../../assets/tyler-schumacher-crop-bw.jpg';
 import Avatar from '../../assets/tyler-schumacher-bw.jpg';
 
 const Hero = (): JSX.Element => (
   <div className="h-screen grid grid-cols-1 xl:grid-cols-7 sm:grid-cols-1 xl:gap-0">
     <div className="flex items-end xl:items-center col-span-3">
       <img
+        src={MobileAvatar}
+        alt="Tyler Schumacher"
+        className="flex items-center justify-center max-w-xs mx-auto mb-8 rounded-full md:hidden xl:-mb-10 2xl:max-w-sm md:shadow-hero"
+      />
+      <img
         src={Avatar}
         alt="Tyler Schumacher"
-        className="flex items-center justify-center max-w-xs mx-auto mb-8 rounded-full xl:-mb-10 2xl:max-w-sm md:shadow-hero"
+        className="items-center justify-center hidden max-w-xs mx-auto mb-8 rounded-full md:flex xl:-mb-10 2xl:max-w-sm md:shadow-hero"
       />
     </div>
     <div className="flex flex-col text-center text-black xl:text-left xl:justify-center col-span-4">
