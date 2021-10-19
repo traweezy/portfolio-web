@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.277b4987.chunk.css",
-    "main.js": "/static/js/main.f70c4c8c.chunk.js",
-    "main.js.map": "/static/js/main.f70c4c8c.chunk.js.map",
+    "main.js": "/static/js/main.dad7833b.chunk.js",
+    "main.js.map": "/static/js/main.dad7833b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5dc0d18b.js",
     "runtime-main.js.map": "/static/js/runtime-main.5dc0d18b.js.map",
     "static/css/2.74782252.chunk.css": "/static/css/2.74782252.chunk.css",
@@ -38,7 +38,7 @@
     "static/media/snowmobiles.60dd4859.png": "/static/media/snowmobiles.60dd4859.png",
     "static/media/tailwind.315d0ac2.svg": "/static/media/tailwind.315d0ac2.svg",
     "static/media/twisted-rope.86f480c5.png": "/static/media/twisted-rope.86f480c5.png",
-    "static/media/tyler-schumacher-crop-bw.62ae0cf5.jpg": "/static/media/tyler-schumacher-crop-bw.62ae0cf5.jpg",
+    "static/media/tyler-schumacher-bw.d3e7d24d.jpg": "/static/media/tyler-schumacher-bw.d3e7d24d.jpg",
     "static/media/tyler-schumacher-resume.98e8b803.PDF": "/static/media/tyler-schumacher-resume.98e8b803.PDF",
     "static/media/typescript.a6305a73.svg": "/static/media/typescript.a6305a73.svg",
     "static/media/work-in-progress.4529c3b3.png": "/static/media/work-in-progress.4529c3b3.png"
@@ -48,6 +48,6 @@
     "static/css/2.74782252.chunk.css",
     "static/js/2.5a02643f.chunk.js",
     "static/css/main.277b4987.chunk.css",
-    "static/js/main.f70c4c8c.chunk.js"
+    "static/js/main.dad7833b.chunk.js"
   ]
 }
