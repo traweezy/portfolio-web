@@ -99,7 +99,7 @@ const Projects = ({ project }: Props): JSX.Element => {
         <div className="flex flex-row">
           {links.map(link =>
             link ? (
-              <LinkButton onClick={() => handleClick(link.url)}>
+              <LinkButton key={link.id} onClick={() => handleClick(link.url)}>
                 {link.type}
               </LinkButton>
             ) : null,

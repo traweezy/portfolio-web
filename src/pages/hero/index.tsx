@@ -1,6 +1,6 @@
 // import { Radar } from 'react-chartjs-2';
 
-import Avatar from '../../assets/tyler-schumacher-crop-bw.jpg';
+import Avatar from '../../assets/tyler-schumacher-bw.jpg';
 
 const Hero = (): JSX.Element => (
   <div className="h-screen grid grid-cols-1 xl:grid-cols-7 sm:grid-cols-1 xl:gap-0">

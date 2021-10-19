@@ -24,7 +24,7 @@ const Projects = (): JSX.Element => {
           ?.sort(
             (projectX, projectY) => projectX.sortIndex - projectY.sortIndex,
           )
-          ?.map((project, index) => {
+          ?.map((project: Project, index) => {
             const isLast = index === data.length - 1;
             return (
               <div key={project.id} className="my-16 lg:my-32">

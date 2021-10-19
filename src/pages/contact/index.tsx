@@ -91,7 +91,7 @@ const Contact = (): JSX.Element => {
             <FieldErrorMessage message={errors.name.message} />
           ) : null}
         </div>
-        <div className="w-full pl-3 md:w-1/2">
+        <div className="w-full md:w-1/2">
           <label
             className="block mb-2 text-base font-bold tracking-wide capitalize"
             htmlFor="form-email"
