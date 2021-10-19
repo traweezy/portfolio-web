@@ -62,7 +62,7 @@ const Projects = ({ project }: Props): JSX.Element => {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10">
-      <div className="flex items-center mb-6 align-center justify-center col-span-1">
+      <div className="flex items-center justify-center mb-6 align-center col-span-1">
         <img
           className="xl:max-w-lg"
           src={
