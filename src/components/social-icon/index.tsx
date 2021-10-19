@@ -9,10 +9,7 @@ interface SocialIconProps {
 }
 
 const SocialIcon = ({ name, url }: SocialIconProps): JSX.Element => {
-  const handleClick = (): void => {
-    console.log(url);
-    window.open(url, '_blank')?.focus();
-  };
+  const handleClick = (): void => window.open(url, '_blank')?.focus();
 
   const icons: Record<SocialIconName, JSX.Element> = {
     gitHub: <GitHub onClick={() => handleClick()} />,
