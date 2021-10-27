@@ -154,7 +154,7 @@ const Contact = (): JSX.Element => {
         data-testid="form-submit-button"
         disabled={isLoading}
         type="submit"
-        className="float-right w-full px-6 py-3 text-base font-bold text-white rounded-lg focus:border-tangerine-600 focus:ring-1 focus:ring-tangerine-600 focus:border-none bg-tangerine-600 hover:bg-tangerine-600 duration-200"
+        className="hover:bg-tangerine-400 float-right w-full px-6 py-3 text-base font-bold text-white rounded-lg focus:border-tangerine-600 focus:ring-1 focus:ring-tangerine-600 focus:border-none bg-tangerine-600 duration-200"
       >
         {isLoading ? (
           <div className="flex items-center justify-center pr-4">
