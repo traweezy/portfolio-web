@@ -31,10 +31,6 @@ const Navigation = ({ routes }: NavigationProps): JSX.Element => {
       </div>
       <div>
         <SocialIcon name="gitHub" url="https://github.com/traweezy" />
-        <SocialIcon
-          name="linkedin"
-          url="https://www.linkedin.com/in/tyler-schumacher-963984223/"
-        />
         <SocialIcon name="email" url="mailto:tyler.schumacher@protonmail.com" />
         <SocialIcon name="resume" url="https://github.com/traweezy" />
       </div>

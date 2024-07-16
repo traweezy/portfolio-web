@@ -9,7 +9,6 @@ import ConentSection from './components/content-section';
 import Hero from './pages/hero/index';
 import About from './pages/about';
 import Interests from './pages/interests';
-import Projects from './pages/projects';
 import Skills from './pages/skills';
 import Contact from './pages/contact';
 
@@ -32,11 +31,11 @@ const routes: RouteConfig[] = [
     path: '#interests',
     component: Interests,
   },
-  {
-    name: 'projects',
-    path: '#projects',
-    component: Projects,
-  },
+  // {
+  //   name: 'projects',
+  //   path: '#projects',
+  //   component: Projects,
+  // },
   {
     name: 'contact',
     path: '#contact',

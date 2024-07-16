@@ -1,7 +1,7 @@
-import { GitHub, Linkedin, Mail, Download } from 'react-feather';
+import { GitHub, Mail, Download } from 'react-feather';
 import downloadResume from '../../services/download-resume';
 
-type SocialIconName = 'gitHub' | 'linkedin' | 'email' | 'resume';
+type SocialIconName = 'gitHub' | 'email' | 'resume';
 
 interface SocialIconProps {
   name: SocialIconName;
@@ -13,7 +13,6 @@ const SocialIcon = ({ name, url }: SocialIconProps): JSX.Element => {
 
   const icons: Record<SocialIconName, JSX.Element> = {
     gitHub: <GitHub onClick={() => handleClick()} />,
-    linkedin: <Linkedin onClick={() => handleClick()} />,
     email: <Mail onClick={() => handleClick()} />,
     resume: <Download onClick={() => downloadResume()} />,
   };
