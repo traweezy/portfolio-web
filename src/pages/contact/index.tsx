@@ -1,12 +1,7 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useMutation } from 'react-query';
 import * as yup from 'yup';
-import { toast } from 'react-toastify';
 import FieldErrorMessage from './components/field-error-message';
-import Api from '../../services/api';
-
-const api = new Api();
 
 const schema = yup.object().shape({
   name: yup.string().required(),
