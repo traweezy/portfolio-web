@@ -5,10 +5,7 @@ import BuffaloBillsLogo from '../../assets/buffalo-bills-logo.svg';
 import BuffaloSabresLogo from '../../assets/buffalo-sabres-logo.svg';
 import NewYorkKnicksLogo from '../../assets/new-york-knicks-logo.svg';
 import Bass from '../../assets/bass.png';
-import Gaming from '../../assets/gaming.png';
 import Motorcycles from '../../assets/motorcycles.png';
-import Motocross from '../../assets/motocross.png';
-import Snowmobiles from '../../assets/snowmobiles.png';
 import shuffleArray from '../../utils/shuffle-array';
 
 const interests: ButtonGridItem[] = [
