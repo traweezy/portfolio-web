@@ -132,7 +132,6 @@ const Contact = (): JSX.Element => {
       </div>
       <div className="flex flex-wrap mb-2 -mx-3">
         <div className="w-full mb-6">
-          {console.log('test')}
           <label
             className="block mb-2 text-base font-bold capitalize tracking-wid e"
             htmlFor="form-message"
