@@ -17,7 +17,7 @@ const MobileNavigation = ({ routes }: NavigationProps): JSX.Element => {
 
   return (
     <>
-      <nav className="fixed top-0 z-20 w-full px-2  pt-4 pb-5  bg-blue-500 lg:hidden ">
+      <nav className="fixed top-0 z-20 w-full px-2  pt-4 pb-5  bg-bills-blue-600 lg:hidden ">
         <div className="container flex items-center mx-auto">
           <div className="flex justify-start w-full font-extrabold text-white">
             <a
@@ -37,7 +37,7 @@ const MobileNavigation = ({ routes }: NavigationProps): JSX.Element => {
             </button>
           </div>
           <div
-            className={`flex items-center justify-center fixed top-20 left-0 z-30 w-full ${heightClass} overflow-y-hidden bg-blue-500 transition-height duration-500 ease-in-out`}
+            className={`flex items-center justify-center fixed top-20 left-0 z-30 w-full ${heightClass} overflow-y-hidden bg-bills-blue-600 transition-height duration-500 ease-in-out`}
           >
             <div className="text-center -mt-60">
               {routes.map(({ name, path }) => (
@@ -55,10 +55,7 @@ const MobileNavigation = ({ routes }: NavigationProps): JSX.Element => {
             </div>
             <div className="absolute bottom-24">
               <SocialIcon name="gitHub" url="https://github.com/traweezy" />
-              <SocialIcon
-                name="email"
-                url="mailto:tyler.schumacher@protonmail.com"
-              />
+              <SocialIcon name="email" url="mailto:tyschumacher@proton.me" />
               <SocialIcon name="resume" />
             </div>
           </div>

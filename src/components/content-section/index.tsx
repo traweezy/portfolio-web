@@ -43,7 +43,7 @@ const ContentSection = ({ children, name, id }: Props): JSX.Element => {
         className="flex flex-col items-center lg:mb-32"
       >
         <div ref={ref} className="w-full mb-10">
-          <div className="h-1 w-9 bg-tangerine-600" />
+          <div className="h-1 w-9 bg-bills-red-600" />
           <div className="text-2xl font-extrabold text-black uppercase">
             {name}
           </div>

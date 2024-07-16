@@ -9,10 +9,10 @@ const About = (): JSX.Element => {
     <div className="text-lg">
       <p className="pb-4">
         My name is Tyler Schumacher, I am a full stack web developer, with over
-        9 years of experience. Curently working in the sports betting industry,
-        while previously working with large finaancial banks and fintech
+        9 years of experience. Currently working in the sports betting industry,
+        while previously working with large financial banks and fintech
         companies creating both public facing web application and internal
-        tooling, while keep working on side projects on my own time.
+        tooling
       </p>
       <p className="pb-4">
         I focus on working with creating UI&apos;s that look beautiful and

@@ -18,11 +18,11 @@ const Hero = (): JSX.Element => (
     <div className="flex flex-col text-center text-black xl:text-left xl:justify-center col-span-4">
       <div className="mb-4 text-3xl">
         Hello there, <br />I am
-        <span className="text-tangerine-600"> Tyler Schumacher</span>
+        <span className="text-bills-red-600"> Tyler Schumacher</span>
       </div>
       <p className="mb-2 text-xl ">
         I&apos;m a{' '}
-        <span className="text-tangerine-600">full stack web developer </span>
+        <span className="text-bills-red-600">full stack web developer </span>
         passionate about creating beautiful UIs, intuitive UX patterns, and
         scalable backends.
       </p>

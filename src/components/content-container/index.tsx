@@ -4,7 +4,7 @@ import Footer from '../footer';
 const settings: ParticleBackgroundConfig = {
   particle: {
     particleCount: 100,
-    color: '#ffb75f',
+    color: '#dd1a1a',
     minSize: 2,
     maxSize: 4,
   },

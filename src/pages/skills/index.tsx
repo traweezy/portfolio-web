@@ -1,5 +1,7 @@
+import { useMemo } from 'react';
 import ButtonGrid from '../../components/button-grid';
 import Linux from '../../assets/linux.png';
+import shuffleArray from '../../utils/shuffle-array';
 
 const skills: ButtonGridItem[] = [
   {
@@ -28,9 +30,10 @@ const skills: ButtonGridItem[] = [
     link: 'https://sass-lang.com/',
   },
   {
-    name: 'Tailwind CSS',
-    image: 'https://cdn.worldvectorlogo.com/logos/tailwindcss.svg',
-    link: 'https://tailwindcss.com/',
+    name: 'Vitest',
+    image:
+      'https://seeklogo.com/images/V/vitest-logo-9ADDA575A5-seeklogo.com.png',
+    link: 'https://vitest.dev/',
   },
   {
     name: 'NodeJS',
@@ -44,9 +47,10 @@ const skills: ButtonGridItem[] = [
     link: 'https://developer.mozilla.org/en-US/docs/Glossary/REST',
   },
   {
-    name: 'GraphQL',
-    image: 'https://cdn.worldvectorlogo.com/logos/graphql.svg',
-    link: 'https://graphql.org/',
+    name: 'Tanstack',
+    image:
+      'https://seeklogo.com/images/R/react-query-logo-1340EA4CE9-seeklogo.com.png',
+    link: 'https://tanstack.com/',
   },
   {
     name: 'PostgreSQL',
@@ -54,19 +58,22 @@ const skills: ButtonGridItem[] = [
     link: 'https://www.postgresql.org/',
   },
   {
-    name: 'MongoDB',
-    image: 'https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg',
-    link: 'https://www.mongodb.com/',
+    name: 'AWS',
+    image:
+      'https://seeklogo.com/images/A/amazon-web-services-aws-logo-6C2E3DCD3E-seeklogo.com.png',
+    link: 'https://aws.amazon.com/',
   },
   {
-    name: 'Elasticsearch',
-    image: 'https://cdn.worldvectorlogo.com/logos/elastic-elasticsearch.svg',
-    link: 'https://www.elastic.co/',
+    name: 'Vite',
+    image:
+      'https://seeklogo.com/images/V/vite-logo-BFD4283991-seeklogo.com.png',
+    link: 'https://vitejs.dev/',
   },
   {
-    name: 'Redis',
-    image: 'https://cdn.worldvectorlogo.com/logos/redis.svg',
-    link: 'https://redis.io/',
+    name: 'Playwright ',
+    image:
+      'https://seeklogo.com/images/P/playwright-logo-22FA8B9E63-seeklogo.com.png',
+    link: 'https://playwright.dev/',
   },
   {
     name: 'Windows',
@@ -90,11 +97,15 @@ const skills: ButtonGridItem[] = [
   },
   {
     name: 'Jest',
-    image: 'https://nx.dev/documentation/latest/shared/jest-logo.png',
+    image:
+      'https://seeklogo.com/images/J/jest-logo-F9901EBBF7-seeklogo.com.png',
     link: 'https://jestjs.io/',
   },
 ];
 
-const Skills = (): JSX.Element => <ButtonGrid items={skills} />;
+const Skills = (): JSX.Element => {
+  const shuffledSkills = useMemo(() => shuffleArray(skills), []);
+  return <ButtonGrid items={shuffledSkills} />;
+};
 
 export default Skills;

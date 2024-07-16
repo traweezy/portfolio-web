@@ -11,7 +11,7 @@ const Navigation = ({ routes }: NavigationProps): JSX.Element => {
   const location = useLocation();
 
   return (
-    <nav className="flex-col justify-between hidden h-full p-4 bg-blue-500 lg:flex">
+    <nav className="flex-col justify-between hidden h-full p-4 bg-bills-blue-600 lg:flex">
       <div>
         <div className="mb-12">
           <div className="inline-block text-4xl font-extrabold text-white uppercase">
@@ -31,7 +31,7 @@ const Navigation = ({ routes }: NavigationProps): JSX.Element => {
       </div>
       <div>
         <SocialIcon name="gitHub" url="https://github.com/traweezy" />
-        <SocialIcon name="email" url="mailto:tyler.schumacher@protonmail.com" />
+        <SocialIcon name="email" url="mailto:tyschumacher@proton.me" />
         <SocialIcon name="resume" url="https://github.com/traweezy" />
       </div>
     </nav>

@@ -21,7 +21,7 @@ const SocialIcon = ({ name, url }: SocialIconProps): JSX.Element => {
     <button
       name={name}
       type="button"
-      className="p-2 mr-2 rounded-full ring-4 ring-tangerine-600 ring-opacity-0 hover:ring-opacity-100 transition duration-500 ease-in-out"
+      className="p-2 mr-2 rounded-full ring-4 ring-bills-red-600 ring-opacity-0 hover:ring-opacity-100 transition duration-500 ease-in-out"
     >
       {icons[name]}
     </button>

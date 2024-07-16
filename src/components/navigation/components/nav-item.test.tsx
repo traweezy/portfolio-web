@@ -31,7 +31,7 @@ describe('Given <NavItem />', () => {
     it('Should display name as tangerine text', () => {
       const navItem = screen.getByText('Marklar');
       expect(navItem).toBeInTheDocument();
-      expect(navItem.className.includes('text-tangerine')).toBeTruthy();
+      expect(navItem.className.includes('text-bills-red')).toBeTruthy();
     });
   });
 });

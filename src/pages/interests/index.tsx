@@ -1,12 +1,32 @@
+import { useMemo } from 'react';
 import ButtonGrid from '../../components/button-grid';
 import Books from '../../assets/books.png';
+import BuffaloBillsLogo from '../../assets/buffalo-bills-logo.svg';
+import BuffaloSabresLogo from '../../assets/buffalo-sabres-logo.svg';
+import NewYorkKnicksLogo from '../../assets/new-york-knicks-logo.svg';
 import Bass from '../../assets/bass.png';
 import Gaming from '../../assets/gaming.png';
 import Motorcycles from '../../assets/motorcycles.png';
 import Motocross from '../../assets/motocross.png';
 import Snowmobiles from '../../assets/snowmobiles.png';
+import shuffleArray from '../../utils/shuffle-array';
 
-const skills: ButtonGridItem[] = [
+const interests: ButtonGridItem[] = [
+  {
+    name: 'Buffalo Bills',
+    image: BuffaloBillsLogo,
+    link: 'https://www.buffalobills.com/',
+  },
+  {
+    name: 'Buffalo Sabres',
+    image: BuffaloSabresLogo,
+    link: 'https://www.nhl.com/sabres/',
+  },
+  {
+    name: 'New York Knicks',
+    image: NewYorkKnicksLogo,
+    link: 'https://www.nhl.com/sabres/',
+  },
   {
     name: 'Books',
     image: Books,
@@ -22,23 +42,11 @@ const skills: ButtonGridItem[] = [
     image: Motorcycles,
     link: 'https://en.wikipedia.org/wiki/Motorcycle',
   },
-  {
-    name: 'Motocross',
-    image: Motocross,
-    link: 'https://en.wikipedia.org/wiki/Motocross',
-  },
-  {
-    name: 'Snowmobiles',
-    image: Snowmobiles,
-    link: 'https://en.wikipedia.org/wiki/Snowmobile',
-  },
-  {
-    name: 'Gaming',
-    image: Gaming,
-    link: 'https://en.wikipedia.org/wiki/Video_game',
-  },
 ];
 
-const Interests = (): JSX.Element => <ButtonGrid items={skills} />;
+const Interests = (): JSX.Element => {
+  const shuffledInterests = useMemo(() => shuffleArray(interests), []);
+  return <ButtonGrid items={shuffledInterests} />;
+};
 
 export default Interests;
